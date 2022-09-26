@@ -1,9 +1,9 @@
 @font-face {
 	font-family: 'triglav';
-	src: url('D:/General_Folder/New_site_of_eve/fonts/triglavian/trig.eot'); /* IE 9 Compatibility Mode */
-	src: url('D:/General_Folder/New_site_of_eve/fonts/triglavian/trig.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
-		url('D:/General_Folder/New_site_of_eve/fonts/triglavian/trig.woff2') format('woff2'), /* Super Modern Browsers */
-		url('D:/General_Folder/New_site_of_eve/fonts/triglavian/trig.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
-		url('D:/General_Folder/New_site_of_eve/fonts/triglavian/trig.ttf') format('truetype'), /* Safari, Android, iOS */
-		url('D:/General_Folder/New_site_of_eve/fonts/triglavian/trig#f-trig') format('svg'); /* Chrome < 4, Legacy iOS */
+	src: url('fonts/triglavian/trig.eot'); /* IE 9 Compatibility Mode */
+	src: url('fonts/triglavian/trig.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('fonts/triglavian/trig.woff2') format('woff2'), /* Super Modern Browsers */
+		url('fonts/triglavian/trig.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('fonts/triglavian/trig.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('fonts/triglavian/trig#f-trig') format('svg'); /* Chrome < 4, Legacy iOS */
 }
