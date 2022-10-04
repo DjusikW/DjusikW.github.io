@@ -61,10 +61,19 @@ hr {
     color:rgb(255, 165, 0);
 }
 .Upwell_main .Upwell_table {
-    display: flex;
-    justify-content: center;
+    width: 100%;
 }
-.Upwell_main .Upwell_video {
+.Upwell_main .Upwell_table .table_tr {
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+}
+.Upwell_main .Upwell_table .table_tr td img {
+    width: 100%;
+}
+.Upwell_main .Upwell_video video{
+    width: 100%;
+    box-sizing: border-box;
     padding: 0.2em;
 }
 .Caldari_state {
@@ -83,12 +92,25 @@ hr {
 .Caldari_state .Caldari-img img {
     max-width: 100%;
 }
-.Caldari_state .Caldari-video {
+.Caldari_state .Caldari-video video {
+    width: 100%;
+    box-sizing: border-box;
     padding: 0.2em;
 }
-
+.eve_invasion .box3 video {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.2em;
+}
 .foot p{
     color: rgb(41, 41, 41);
     background-color: rgb(7, 7, 7);
     max-width: 9%;
 }
+@media all and (max-width: 665px) {
+    .Upwell_main .Upwell_table .table_tr {
+        display: flex;
+        flex-direction: column;
+        max-width: 50%;
+    }
+} 
