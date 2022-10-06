@@ -1,4 +1,7 @@
 /* font-family: "Shentox","Rogan",sans-serif; */
+* {
+    box-sizing: border-box;
+}
 body {
     font-family: "Shentox","Rogan",sans-serif;
     background-color: #020202;
@@ -60,15 +63,16 @@ hr {
     padding: 0.2%;
     color:rgb(255, 165, 0);
 }
-.Upwell_main .Upwell_table {
-    width: 100%;
+.Upwell_main .Upwell_str_hr {
+    max-width: 99%;
 }
-.Upwell_main .Upwell_table .table_tr {
+.Upwell_main .Upwell_table {
     color: white;
     display: flex;
-    justify-content: space-evenly;
+    gap: 10%;
+    justify-content: center;
 }
-.Upwell_main .Upwell_table .table_tr td img {
+.Upwell_main .Upwell_table img {
     width: 100%;
 }
 .Upwell_main .Upwell_video video{
@@ -97,6 +101,9 @@ hr {
     box-sizing: border-box;
     padding: 0.2em;
 }
+.eve_invasion .box1 img {
+    max-width: 30%;
+}
 .eve_invasion .box3 video {
     width: 100%;
     box-sizing: border-box;
@@ -107,10 +114,19 @@ hr {
     background-color: rgb(7, 7, 7);
     max-width: 9%;
 }
-@media all and (max-width: 665px) {
-    .Upwell_main .Upwell_table .table_tr {
+@media all and (max-width: 845px) {
+    .Upwell_main .Upwell_table{
         display: flex;
         flex-direction: column;
-        max-width: 50%;
+        justify-content: center;
+    }
+    .Upwell_main .Upwell_table img {
+        max-width: 40%;
+    }
+    .Caldari_state .box1 img {
+      width: 20%;
+    }
+    .eve_invasion .box1 img {
+        width: 25%;
     }
 } 
