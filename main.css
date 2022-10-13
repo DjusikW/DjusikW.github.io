@@ -1,132 +1,156 @@
-/* font-family: "Shentox","Rogan",sans-serif; */
-* {
-    box-sizing: border-box;
-}
 body {
-    font-family: "Shentox","Rogan",sans-serif;
-    background-color: #020202;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: linear-gradient(-45deg,  #cbb796, #f8a73f, #db5c01, #1b1612);
+    background-size: 400% 400%;
+    animation: gradient 30s ease infinite;
 }
-hr {
-    /* установим высоту контейнера */
-  height: 2px;
-  /* границы уберем */
-  border: 0;
-  /* установим нужный цвет, например, красный */
-  background-color: rgb(88, 40, 6);
-}
-.eve-head { /* head start */
-    border: 2px solid rgb(0, 0, 0); /* затычка */
-    text-align: center;
-    background-color: rgb(11, 11, 11);
-    background: -moz-radial-gradient( #020202, rgb(11, 11, 11));
-    background: -webkit-linear-gradient( #020202, rgb(11, 11, 11));
-    background: -o-linear-gradient( #020202, rgb(11, 11, 11));
-    background: -ms-linear-gradient( #020202, rgb(11, 11, 11));
-    max-height: 300px;
-}
-.eve-head .eve-neck .menu {
-    margin: 0.5%;
-    display: flex;
-    justify-content: center;
-}
-.eve-head .eve-neck .edencom-img img {
-    max-height: 150px; 
-    max-width: 300px; 
-}
-.eve-head .eve-neck .menu p {
-    margin: 1%;
-    padding: 1.5%;
-    background-color: rgb(20, 20, 20);
-    background: -moz-radial-gradient( rgb(11, 11, 11), rgb(71, 33, 5));
-    background: -webkit-linear-gradient( rgb(11, 11, 11), rgb(71, 33, 5));
-    background: -o-linear-gradient( rgb(11, 11, 11), rgb(71, 33, 5));
-    background: -ms-linear-gradient( rgb(11, 11, 11), rgb(71, 33, 5));
-    border: 1px solid rgb(88, 40, 6);
-}
-.eve-head .eve-neck .menu a {
-    text-decoration: none;
-    color: white;
-}
-.eve-head .eve-neck .menu p:hover a {
-    text-decoration: underline;
-} /* head end */
-.Upwell_main {
-    color: white;
-   background-color: rgb(11, 11, 11);
-   border: rgb(88, 40, 6) solid 2px;
-}
-.Upwell_main p {
-    padding: 0.6%;
-    font-size: 110%;
-}
-.Upwell_main .Upwell_h {
-    padding: 0.2%;
-    color:rgb(255, 165, 0);
-}
-.Upwell_main .Upwell_str_hr {
-    max-width: 99%;
-}
-.Upwell_main .Upwell_table {
-    color: white;
-    display: flex;
-    gap: 10%;
-    justify-content: center;
-}
-.Upwell_main .Upwell_table img {
+
+html, body {
     width: 100%;
+    height: 100%;
 }
-.Upwell_main .Upwell_video video{
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+section {
+    height: 100%;
     width: 100%;
-    box-sizing: border-box;
-    padding: 0.2em;
+    position: absolute;
 }
-.Caldari_state {
-    color: white;
-    background-color: rgb(11, 11, 11);
-    border: rgb(88, 40, 6) solid 2px;
-}
-.Caldari_state p {
-    padding: 0.6%;
-    font-size: 110%;
-}
-.Caldari_state .Caldari_h {
-    padding: 0.6%;
-    color:rgb(255, 165, 0);
-}
-.Caldari_state .Caldari-img img {
-    max-width: 100%;
-}
-.Caldari_state .Caldari-video video {
+
+.leaf {
+    position: absolute;
     width: 100%;
-    box-sizing: border-box;
-    padding: 0.2em;
+    height: 100%;
+    top: 0;
+    left: 0;
 }
-.eve_invasion .box1 img {
-    max-width: 30%;
+
+.leaf div {
+    position: absolute;
+    display: block;
 }
-.eve_invasion .box3 video {
-    width: 100%;
-    box-sizing: border-box;
-    padding: 0.2em;
+
+.leaf div:nth-child(1) {
+    left: 20%;
+    animation: fall 25s linear infinite;
+    animation-delay: -2s;
+
 }
-.foot p{
-    color: rgb(41, 41, 41);
-    background-color: rgb(7, 7, 7);
-    max-width: 9%;
+
+.leaf div:nth-child(2) {
+    left: 70%;
+    animation: fall 25s linear infinite;
+    animation-delay: -4s;
 }
-@media all and (max-width: 845px) {
-    .Upwell_main .Upwell_table{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+
+.leaf div:nth-child(3) {
+    left: 10%;
+    animation: fall 27s linear infinite;
+    animation-delay: -7s;
+
+}
+
+.leaf div:nth-child(4) {
+    left: 50%;
+    animation: fall 28s linear infinite;
+    animation-delay: -5s;
+}
+
+.leaf div:nth-child(5) {
+    left: 85%;
+    animation: fall 20s linear infinite;
+    animation-delay: -5s;
+}
+
+.leaf div:nth-child(6) {
+    left: 15%;
+    animation: fall 26s linear infinite;
+    animation-delay: -10s;
+}
+
+.leaf div:nth-child(7) {
+    left: 90%;
+    animation: fall 25s linear infinite;
+    animation-delay: -4s;
+}
+
+@keyframes fall {
+    0% {
+        opacity: 1;
+        top: -10%;
+        transform: translateX (20px) rotate(0deg);
     }
-    .Upwell_main .Upwell_table img {
-        max-width: 40%;
+
+    20% {
+        opacity: 0.8;
+        transform: translateX (-20px) rotate(45deg);
     }
-    .Caldari_state .box1 img {
-      width: 20%;
+
+    40% {
+
+        transform: translateX (-20px) rotate(90deg);
     }
-    .eve_invasion .box1 img {
-        width: 25%;
+
+    60% {
+
+        transform: translateX (-20px) rotate(135deg);
     }
-} 
+
+    80% {
+
+        transform: translateX (-20px) rotate(180deg);
+    }
+
+    100% {
+
+        top: 110%;
+        transform: translateX (-20px) rotate(225deg);
+    }
+}
+
+.leaf1 {
+    transform: rotateX(180deg);
+}
+
+h2 {
+    /* position:absolute ; 
+        top:40%;
+        width:100%;
+        font-family: 'Courgette', cursive;
+        font-size:4em;
+        text-align:center;
+        transform:translate ;
+        color:#fff;
+        transform:translateY (-50%); */
+    color: blanchedalmond;
+}
+
+
+.but {
+    position: absolute;
+    left: 50%;
+    margin-left: -150px;
+    display: inline-flex;
+    gap: 20%;
+    align-items: center;
+
+}
+
+.button:hover {
+    background-color: crimson;
+}
