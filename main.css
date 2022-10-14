@@ -2,29 +2,19 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background: linear-gradient(-45deg,  #cbb796, #f8a73f, #db5c01, #1b1612);
-    background-size: 400% 400%;
-    animation: gradient 30s ease infinite;
 }
-
-html, body {
-    width: 100%;
+html {
     height: 100%;
 }
 
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
+body {
+    background-image: url('https://png.pngtree.com/png-clipart/20200730/ourlarge/pngtree-hello-autumn-maple-leaves-frame-png-image_2317860.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    margin: 0;
 }
+
 
 section {
     height: 100%;
@@ -47,45 +37,49 @@ section {
 
 .leaf div:nth-child(1) {
     left: 20%;
-    animation: fall 25s linear infinite;
+    animation: fall 20s linear infinite;
     animation-delay: -2s;
 
 }
-
 .leaf div:nth-child(2) {
     left: 70%;
-    animation: fall 25s linear infinite;
+    animation: fall 20s linear infinite;
     animation-delay: -4s;
 }
-
 .leaf div:nth-child(3) {
     left: 10%;
-    animation: fall 27s linear infinite;
+    animation: fall 22s linear infinite;
     animation-delay: -7s;
 
 }
-
 .leaf div:nth-child(4) {
     left: 50%;
-    animation: fall 28s linear infinite;
+    animation: fall 23s linear infinite;
     animation-delay: -5s;
 }
-
 .leaf div:nth-child(5) {
     left: 85%;
-    animation: fall 20s linear infinite;
+    animation: fall 17s linear infinite;
     animation-delay: -5s;
 }
-
 .leaf div:nth-child(6) {
     left: 15%;
-    animation: fall 26s linear infinite;
+    animation: fall 16s linear infinite;
     animation-delay: -10s;
 }
-
 .leaf div:nth-child(7) {
     left: 90%;
+    animation: fall 19s linear infinite;
+    animation-delay: -4s;
+}
+.leaf div:nth-child(8) {
+    left: 30%;
     animation: fall 25s linear infinite;
+    animation-delay: -6s;
+}
+.leaf div:nth-child(9) {
+    left: 45%;
+    animation: fall 18s linear infinite;
     animation-delay: -4s;
 }
 
@@ -127,20 +121,6 @@ section {
     transform: rotateX(180deg);
 }
 
-h2 {
-    /* position:absolute ; 
-        top:40%;
-        width:100%;
-        font-family: 'Courgette', cursive;
-        font-size:4em;
-        text-align:center;
-        transform:translate ;
-        color:#fff;
-        transform:translateY (-50%); */
-    color: blanchedalmond;
-}
-
-
 .but {
     position: absolute;
     left: 50%;
@@ -148,9 +128,91 @@ h2 {
     display: inline-flex;
     gap: 20%;
     align-items: center;
-
 }
 
 .button:hover {
     background-color: crimson;
+}
+
+.bg {
+    animation: slide 20s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, #dbba86 50%, #dd8d15 50%, #883f0b 50%);
+    bottom: 0;
+    left: -50%;
+    opacity: .5;
+    position: fixed;
+    right: -50%;
+    top: 0;
+    z-index: -1;
+}
+/* #cbb796, #f8a73f, #db5c01, #1b1612 */
+.bg2 {
+    animation-direction: alternate-reverse;
+    animation-duration: 22s;
+}
+
+.bg3 {
+    animation-duration: 28s;
+}
+
+.content {
+    background-color: rgb(231, 188, 131);
+    border-radius: .25em;
+    box-shadow: 0 0 .25em rgba(0, 0, 0, .25);
+    box-sizing: border-box;
+    left: 50%;
+    padding: 10vmin;
+    position: fixed;
+    text-align: center;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.8;
+}
+
+h1 {
+    font-family: monospace;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(-25%);
+    }
+
+    100% {
+        transform: translateX(25%);
+    }
+}
+.leaf img {
+ max-width: 65%;
+ animation: 35s linear infinite rotate;
+ opacity: 0.5;
+}
+.leaf div {
+    display: inline;
+    
+}
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(180deg);
+    }
+}
+@media all and (max-width: 720px) {
+    .leaf div {
+        width: 70%;
+    }
+    .leaf img {
+        width: 70%;
+    }
+}
+.button {
+    width: 100px;
+    height: 80px;
+    font-size: 20px;
+}
+
+.sam {
+    width: 70%;
 }

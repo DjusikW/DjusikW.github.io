@@ -2,48 +2,110 @@ var sendbutton = document.getElementById('button');
 sendbutton.addEventListener('click', birth);
 
 function birth() {
-    var picture = document.getElementById("main-button");
-    picture.innerHTML = '<img id="meaw" src="https://3dnews.ru/assets/external/illustrations/2021/03/10/1034545/sm.Gothic_Retrospective_1.800.jpeg">';
-    window.setTimeout(Text, 2000)
-    function Text() {
-        var name = prompt('What say?');
-        if (name == 'test1') {
-            alert('try me')
-            tru();
-        } else {
-            alert('Null');
-            Text();
+    alert('С Днем народження Киця! :D');
+    choose();
+    function choose() {
+        var name = prompt('Для Киці є декілька подарунків, обери один з них :) (обирай цифрами 1-2-3)');
+        if (name == '1') {
+            alert('Ти обрала перший), зараз котик його принесе.');
+            alert('А поки ты чекаеш, можеш прочитати віршик :D');
+            var virch = document.getElementById('main-button')
+            virch.innerHTML = '<img style="gift" style="opacity: 0.8;" src="Picture/virch.png">';
+            setTimeout(next1, 70000);
+        } else if (name == '2') {
+            alert('Ти обрала другий), зараз котик його принесе.');
+            alert('А поки ты чекаеш, можеш прочитати віршик :D');
+            var virch = document.getElementById('main-button')
+            virch.innerHTML = '<img style="gift" style="opacity: 0.8;" src="Picture/virch.png">';
+            setTimeout(next2, 70000);
+        } else if (name == '3') {
+            alert('Ти обрала третій), зараз він з`явиться на єкрані :D');
+            var samokat = document.getElementById('main-button');
+            samokat.innerHTML = '<img style="sam" style="opacity: 1;" src="Picture/sam.png">';
+            setTimeout(next3, 60000);
         }
     }
-}
-function tru() {
-    var one = prompt('So');
-    if (one == 'test2') {
-        alert('try');
-        tru2();
-        
-    } else {
-        alert('null2');
-        tru();
+    function next1() {
+        var name = prompt('Один подарунок вже отримано, залишилися ще два (2-3)');
+        if (name == '2') {
+            alert('Ти обрала другий), зараз котик його принесе.');
+            setTimeout(last2, 30000);
+
+        } else if (name == '3') {
+            alert('Ти обрала третій), зараз він з`явиться на єкрані :D');
+            var samokat = document.getElementById('main-button');
+            samokat.innerHTML = '<img style="sam" style="opacity: 1;" src="Picture/sam.png">';
+            setTimeout(last3, 60000);
+
+        }
     }
- }
-function tru2() {
-    var two = prompt('maybe')
-    if (two == 'test3') {
-        alert('true2')
+    function next2() {
+        var name = prompt('Один подарунок вже отримано, залишилися ще два (1-3)');
+        if (name == '1') {
+            alert('Ти обрала перший), зараз котик його принесе.');
+            setTimeout(last2, 30000);
 
-    } else {
-        alert('none');
-        tru2();
+        } else if (name == '3') {
+            alert('Ти обрала третій), зараз він з`явиться на єкрані :D');
+            var samokat = document.getElementById('main-button');
+            samokat.innerHTML = '<img style="gift" style="opacity: 1;" src="Picture/sam.png">';
+            setTimeout(last3, 6000);
+
+        }
+    }
+    function next3() {
+        var name = prompt('Один подарунок вже отримано, залишилися ще два (1-2)');
+        if (name == '1') {
+            alert('Ти обрала перший), зараз котик його принесе.');
+            alert('А поки ты чекаеш, можеш прочитати віршик :D');
+            var virch = document.getElementById('main-button')
+            virch.innerHTML = '<img style="gift" style="opacity: 0.8;" src="Picture/virch.png">';
+            setTimeout(last3, 70000);
+
+        } else if (name == '2') {
+            alert('Ти обрала другий), зараз котик його принесе.');
+            alert('А поки ты чекаеш, можеш прочитати віршик :D');
+            var virch = document.getElementById('main-button')
+            virch.innerHTML = '<img style="gift" style="opacity: 0.8;" src="Picture/virch.png">';
+            setTimeout(last3, 70000);
+
+        }
+    }
+    function last2() {
+        alert('Залишився останній подарунок)');
+        var samokat = document.getElementById('main-button');
+            samokat.innerHTML = '<img style="sam" style="opacity: 1;" src="Picture/sam.png">';
+    }
+    function last3() {
+        alert('Залишився останній подарунок)');
+        alert('зараз котик його принесе');
     }
 }
 
-var test = document.getElementById('testimg')
-test.addEventListener('mousemove', fun)
 
-function fun() {
-    test.innerHTML = '<img>';
-}
+
+//function tru2() {
+   // var two = prompt('maybe')
+  //  if (two == 'test3') {
+       // alert('true2')
+
+   // } else {
+     //   alert('none');
+      //  tru2();
+  //  }
+//}
+
+
 
 //var Cat = document.getElementById("testCat");
-           // Cat.innerHTML = "<img id=testCats src=''>";
+// Cat.innerHTML = "<img style="gift" id=testCats src=''>";
+//function Text() {
+    //var name = prompt('What say?');
+    //if (name == 'test1') {
+      //  alert('try me')
+        //tru();
+    //} else {
+       // alert('Null');
+     //   Text();
+    //}
+//
